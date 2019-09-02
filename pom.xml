@@ -151,8 +151,8 @@
   <distributionManagement>
 	
     <repository>
-    <id>releases</id>
-    <name>Releases</name>
+    <id>prashanth007</id>
+    <name>prashanth_hub</name>
     <url>http://35.158.97.151:8081/nexus/content/repositories/prashanth007/</url>
     </repository>
 
