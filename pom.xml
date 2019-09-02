@@ -153,7 +153,7 @@
     <repository>
     <id>releases</id>
     <name>Releases</name>
-    <url>http://35.158.125.17:8081/nexus/content/repositories/releases/</url>
+    <url>http://35.158.97.151:8081/nexus/content/repositories/prashanth007/</url>
     </repository>
 
     <snapshotRepository>
