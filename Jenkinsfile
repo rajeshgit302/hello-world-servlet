@@ -41,12 +41,12 @@ stages {
       archiveArtifacts 'target/*.war'
       }
  }
- stage('sonar') {
+ stage('sonarqube') {
     environment {
         scannerHome = tool 'sonar'
     }
     steps {
-        withSonarEnv('sonar') {
+        withSonarqubeEnv('sonar') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
         timeout(time: 10, unit: 'MINUTES') {
