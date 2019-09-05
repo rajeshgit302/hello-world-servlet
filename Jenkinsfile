@@ -27,7 +27,7 @@ stages {
        // Run the maven build
 
       //if (isUnix()) {
-         sh 'mvn  install'
+         sh 'mvn -Dmaven.test.failure.ignore=true install'
       //} 
       //else {
       //   bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
