@@ -151,15 +151,15 @@
   <distributionManagement>
 	
     <repository>
-    <id>prashanth007</id>
-    <name>prashanth_hub</name>
-    <url>http://35.158.97.151:8081/nexus/content/repositories/prashanth007/</url>
+    <id>releases</id>
+    <name>Releases</name>
+    <url>http://18.185.130.154:8081/nexus/content/repositories/releases/</url>
     </repository>
 
     <snapshotRepository>
     <id>snapshots</id>
     <name>Snapshots</name>
-    <url>http://35.158.125.17:8081/nexus/content/repositories/snapshots</url>
+    <url>http://18.185.130.154:8081/nexus/content/repositories/releases/</url>
     </snapshotRepository>
 
   </distributionManagement>
