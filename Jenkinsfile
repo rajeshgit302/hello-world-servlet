@@ -40,6 +40,20 @@ stages {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.war'
       }
- }     
+   } 
+    
+stage('sonarqube') {
+        environment {
+          scannerHome = tool 'sonar'
+         }
+    steps {
+         withSonarqubeEnv('sonar') {
+            sh "${scannerHome}/bin/sonar-scanner"
+         }
+         timeout(time: 10, unit: 'MINUTES') {
+            waitForQualityGate abortPipeline: true
+          }
+     }
 }
 }
+
