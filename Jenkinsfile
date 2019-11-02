@@ -10,13 +10,12 @@ pipeline {
                    git 'https://github.com/prashanth-1993/hello-world-servlet.git'
                 }
            }
-      }
+      
      stage ('building the code') {
        steps {
          sh 'mvn install'
          
        }
-     
      }
-         
+   }    
  }
