@@ -22,5 +22,14 @@ pipeline {
          junit '**/target/surefire-reports/TEST-*.xml'
         }
       }
-   }    
+      stage ('Artifact uploader'){
+      
+        steps {
+          nexusPublisher nexusInstanceId: '12315', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '\'**//target/*.war\'']], mavenCoordinate: [artifactId: 'hello-world-servlet-example', groupId: 'com.geekcap.vmturbo', packaging: 'war', version: '$BUILD_ID']]]
+        }
+      }
+    
+    
+    } 
+  
  }
